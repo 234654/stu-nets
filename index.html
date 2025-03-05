@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Список покупок</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <meta name="description" content="Список покупок с автоматическим обновлением цен">
+    <meta name="author" content="Скопинцев Михаил Николаевич">
+</head>
+<body>
+    <header>
+        <h1>Список покупок</h1>
+        <p class="author">Автор: Скопинцев Михаил Николаевич</p>
+        <p class="school">Индивидуальный проект 11 класс МОБУ СОШ №1</p>
+    </header>
+
+    <main>
+        <div class="add-product-section">
+            <div class="search-container">
+                <input type="text"
+                       id="productSearch"
+                       placeholder="Введите название продукта для поиска или добавления"
+                       autocomplete="off">
+                <button id="addProduct" title="Добавить продукт">
+                    <i class="fas fa-plus"></i>
+                </button>
+            </div>
+            <div id="searchResults" class="search-results"></div>
+        </div>
+
+        <div class="list-controls">
+            <button id="refreshPrices" class="refresh-btn" title="Обновить цены всех продуктов">
+                <i class="fas fa-sync-alt"></i> Обновить цены
+            </button>
+            <button id="clearList" class="clear-btn" title="Очистить весь список">
+                <i class="fas fa-trash"></i> Очистить список
+            </button>
+        </div>
+
+        <div class="shopping-list">
+            <ul id="productList"></ul>
+            <div class="total-section">
+                <p>Итого: <span id="totalPrice">0</span> ₽</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2024 Список покупок | Все цены являются приблизительными</p>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>
